@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Yukari Software 공지사항</title>
+   <style>
+    body {
+       text-align: center;
+    }
+ 
+    h1 {
+       text-align: center;
+    }
+ 
+    .notice-box {
+       text-align: center;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       margin: 10px auto; /* 맨 위쪽과 아랫쪽 여백 조절 */
+       padding: 0px 0; /* 위아래 여백을 조절하여 .notice-box의 높이 조절 */
+       max-width: 500px; /* 최대 너비 지정 */
+    }
+ 
+    .notice-item {
+       margin: 20px 0;
+       padding: 10px;
+       border-top: 1px solid #ccc; /* 가로선 추가 */
+    }
+ 
+    .notice-title {
+    font-weight: bold;
+    cursor: pointer; /* 클릭 가능한 링크로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+    font-family: 'KCC-Ganpan';
+    }
+
+    @font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.n1 {
+    font-family: 'KCC-Ganpan';
+}
+
+.bu1t {
+        font-weight: bold;
+    cursor: pointer; /* 클릭 가능한 링크로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+    font-family: 'KCC-Ganpan';
+    }
+ 
+    /* 첫 번째 공지 아이템의 가로선을 숨김 */
+    .notice-box .notice-item:first-child {
+       border-top: none; /* 첫 번째 공지의 가로선 제거 */
+       font-weight: bold;
+        cursor: pointer; /* 클릭 가능한 링크로 설정 */
+        margin-top: 10px; /* 상단 여백 조절 */
+    }
+
+    /* 게시물 아이디 스타일 */
+    .notice-id {
+       margin-right: 3px; /* 게시물 아이디 오른쪽 여백 조절 */
+       font-family: 'KCC-Ganpan';
+    }
+ </style>
+</head>
+<body>
+   <h1 class="n1">Yukari Software 공지사항</h1>
+   <div class="notice-box">
+      {% for notice in notices %}
+         <div class="notice-item">
+            <span class="notice-id">{{ notice[0] }}.</span>
+            <a href="{{ url_for('notice', id=notice[0]) }}" class="notice-title">제목 : {{ notice[1] }} | 날짜 : {{ notice[3]|format_datetime }}</a>
+         </div>
+      {% endfor %}
+   </div>
+   <a href="/" class="bu1t">뒤로가기</a>
+</body>
+</html>

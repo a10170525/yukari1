@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Notice</title>
+   <style>
+      body {
+         text-align: center;
+      }
+
+      h1 {
+         text-align: center;
+      }
+
+      .notice-box {
+         text-align: left;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         margin: 10px auto;
+         padding: 10px;
+         max-width: 500px;
+      }
+
+      @font-face {
+         font-family: 'KCC-Ganpan';
+         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+         font-weight: normal;
+         font-style: normal;
+      }
+
+      .notice-title {
+         font-weight: bold;
+         font-size: 24px; /* 타이틀 폰트 크기 늘림 */
+         margin: 5px 0; /* 타이틀 위아래 여백 조절 */
+         font-family: 'KCC-Ganpan';
+         white-space: pre-line; /* 여러 줄 표시 지원 */
+      }
+
+      .notice-content {
+         font-size: 16px;
+         font-family: 'KCC-Ganpan';
+         white-space: pre-line; /* 여러 줄 표시 지원 */
+      }
+
+      hr {
+         border: none; /* 기본 수평선 스타일 제거 */
+         border-top: 2px solid #ccc; /* 원하는 두께와 색상으로 설정 */
+         margin-top: 20px; /* 수평선 위 여백 조절 */
+         margin-bottom: 20px; /* 수평선 아래 여백 조절 */
+      }
+
+      .bu1t {
+         font-weight: bold;
+         cursor: pointer; /* 클릭 가능한 링크로 설정 */
+         text-decoration: none; /* 밑줄 제거 */
+         color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+         font-family: 'KCC-Ganpan';
+      }
+   </style>
+</head>
+<body>
+   <h1>Notice</h1>
+   <div class="notice-box">
+      <h2 class="notice-title">{{ notice['title'] }}</h2>
+      <hr />
+      <p class="notice-content">{{ notice['content'] }}</p>
+   </div>
+   <a href="/notices" class="bu1t">뒤로가기</a>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>main</title>
+</head>
+<style>
+    @font-face {
+    font-family: 'KCC-Ganpan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCC-Ganpan.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+    body {
+        text-align: center; /* 페이지 내용을 가운데 정렬 */
+    }
+
+    h1 {
+        margin-top: 50px; /* h1의 상단 여백을 조절하여 중앙으로 이동 */
+    }
+
+    .notice {
+        font-weight: bold;
+        cursor: pointer; /* 클릭 가능한 링크로 설정 */
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 97%; /* 하단 여백 조절 */
+        left: 18%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+    }
+
+    .discord {
+        font-weight: bold;
+        cursor: pointer; /* 클릭 가능한 링크로 설정 */
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 97%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+    }
+    .dev {
+        font-weight: bold;
+        cursor: pointer; /* 클릭 가능한 링크로 설정 */
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 97%; /* 하단 여백 조절 */
+        left: 24%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+    }
+    .yukari {
+        font-weight: bold;
+        cursor: pointer; /* 클릭 가능한 링크로 설정 */
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 97%; /* 하단 여백 조절 */
+        left: 34%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+    }
+    .q {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 90%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 30px;
+    }
+    .a {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 88%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 22px;
+    }
+    .q2 {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 83%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 30px;
+    }
+    .a2 {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 81%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 22px;
+    }
+    .q3 {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 76%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 30px;
+    }
+    .a3 {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 74%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 22px;
+    }
+    .q4 {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 70%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 30px;
+    }
+    .a4 {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 68%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 22px;
+    }
+    .no1 {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 63%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 30px;
+    }
+    .no2 {
+        font-weight: bold;
+        text-decoration: none; /* 밑줄 제거 */
+        font-size: 24px; /* 공지사항 글자 크기 조절 */
+        position: absolute; /* 위치를 절대로 설정 */
+        bottom: 60%; /* 하단 여백 조절 */
+        left: 12%; /* 좌측 여백 조절 */
+        color: black; /* 클릭 시 텍스트 색상을 검은색으로 설정 */
+        font-family: 'KCC-Ganpan';
+        font-size: 30px;
+    }
+    @media screen and (max-width: 1200px) {
+        .notice {
+            font-size: 9px; /* 글자 크기 줄임 */
+            bottom: 97%/* 하단 여백 조절 */
+        }
+        .discord {
+            font-size: 9px;
+            bottom: 97%
+        }
+        .dev {
+            font-size: 9px;
+            bottom: 97%
+        }
+        .yukari {
+            font-size: 9px;
+            bottom: 97%
+        }
+        .q {
+            font-size: 9px;
+        }
+        .a {
+            font-size: 9px;
+        }
+        .q2 {
+            font-size: 9px;
+        }
+        .a2, .q3, .a3, .q4, .a4, .no1, .no2 {
+            font-size: 9px;
+        }
+</style>
+
+<body>
+   <a href="/notices" class="notice">공지사항</a><br>
+   <a href="https://discord.gg/8rWZ5MtZfs" class="discord">디스코드</a><br>
+   <a class="dev">Discord: 001._xm</a>
+   <a class="yukari">Yukari Software</a>
+   <a class="q">Yukari Software는 어떤 업무를 보나요?</a>
+   <a class="a">Yukari Software는 여러분들의 편의를 위해 Discord BOT을 직접 외주를 받아 창의적인 봇을 제작합니다.</a>
+   <a class="q2">해당 업체를 선정하여 얻는 이득이 있나요?</a>
+   <a class="a2">네, 물론 있습니다. 확실한 "성능" 타사와 비교가 안되는 "속도", 안정성 모든 면이 우수합니다.</a>
+   <a class="q3">샘플 또는 테스트를 먼저 하고 외주를 맡기고 싶어요</a>
+   <a class="a3">네 :) 물론 가능합니다, 디스코드로 오시면 체험이 무조건 가능하십니다</a>
+   <a class="q4">제가 조금 까다로운 편이고, 난이도가 좀 있습니다, 모방도 하고싶어요. 가능할까요?</a>
+   <a class="a4">네, 무조건 가능합니다. Yukari Software는 고객님의 만족도를 우선적으로 생각합니다.</a>
+   <a class="no1">여러분들이 서버를 편하게, 효율적이게 관리를 하고싶으시다면? Yukari Software. 고민하지 말고 선택하세요.</a>
+   <a class="no2">자부할 수 있습니다, 믿고 맡겨주신분들 만족도 100%이며 "원격세팅" 또는 "화면공유"로 직접 도움을 드릴 수 있습니다.</a>
+</body>
+</html>
